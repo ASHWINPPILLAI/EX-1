@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Symposium Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        div {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+            padding: 0 10px;
+            font-size: 1.1em;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 15px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        input[type="url"],
+        input[type="search"],
+        textarea,
+        select {
+            width: calc(100% - 22px);
+            padding: 11px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 18px;
+            font-weight: normal;
+            color: #333;
+            margin-top: 0;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05em;
+            margin-right: 12px;
+            transition: background-color 0.2s;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+        progress {
+            width: 100%;
+            height: 22px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Technical Symposium Registration</h1>
+        <h2>Sign up for our upcoming event!</h2>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Info</legend>
+
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Min 8 characters" required minlength="8">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" pattern="[0-9]{10}|[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="99" placeholder="Your Age">
+            </fieldset>
+
+            <fieldset>
+                <legend>Academic Details</legend>
+
+                <label for="college">College/University:</label>
+                <input type="text" id="college" name="college" placeholder="Your College Name" required>
+
+                <label for="branch">Branch/Department:</label>
+                <select id="branch" name="branch" required>
+                    <option value="">--Select Branch--</option>
+                    <option value="CSE">Computer Science</option>
+                    <option value="ECE">Electronics & Communication</option>
+                    <option value="EEE">Electrical & Electronics</option>
+                    <option value="ME">Mechanical</option>
+                    <option value="CE">Civil</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Year of Study:</label>
+                <div class="radio-group">
+                    <input type="radio" id="year1" name="year" value="1st Year" required>
+                    <label for="year1">1st Year</label>
+                    <input type="radio" id="year2" name="year" value="2nd Year">
+                    <label for="year2">2nd Year</label>
+                    <input type="radio" id="year3" name="year" value="3rd Year">
+                    <label for="year3">3rd Year</label>
+                    <input type="radio" id="year4" name="year" value="4th Year">
+                    <label for="year4">4th Year</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Interests</legend>
+
+                <label>Select Areas of Interest:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ai" name="interests" value="AI">
+                    <label for="ai">AI</label><br>
+                    <input type="checkbox" id="ml" name="interests" value="ML">
+                    <label for="ml">Machine Learning</label><br>
+                    <input type="checkbox" id="webdev" name="interests" value="Web Development">
+                    <label for="webdev">Web Dev</label><br>
+                    <input type="checkbox" id="robotics" name="interests" value="Robotics">
+                    <label for="robotics">Robotics</label><br>
+                    <input type="checkbox" id="cybersecurity" name="interests" value="Cybersecurity">
+                    <label for="cybersecurity">Cybersecurity</label>
+                </div>
+
+                <label for="website">Portfolio URL (Optional):</label>
+                <input type="url" id="website" name="website" placeholder="https://yourportfolio.com">
+
+                <label for="searchQuery">How did you hear about us?</label>
+                <input type="search" id="searchQuery" name="searchQuery" placeholder="e.g., Friend, Social Media">
+
+                <label for="abstract">Upload Abstract (PDF):</label>
+                <input type="file" id="abstract" name="abstract" accept=".pdf">
+            </fieldset>
+
+            <fieldset>
+                <legend>Comments</legend>
+                <label for="comments">Any special requests?</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Type your comments here..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Progress</legend>
+                <label for="registrationProgress">Registration Completion:</label>
+                <progress id="registrationProgress" value="70" max="100"></progress>
+            </fieldset>
+
+            <div class="button-group">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset Form">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
