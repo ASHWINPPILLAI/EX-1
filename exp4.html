@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ASHWIN P PILLAI | Personal Branding</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(34, 34, 34, 0.97);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar img {
+      height: 40px;
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+    .navbar .title {
+      font-size: 1.7em;
+      font-weight: bold;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar ul li {
+      margin: 0 20px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1em;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .navbar ul li a:hover {
+      background: #3ec6e0;
+      color: #222;
+    }
+
+    /* Page padding */
+    .page-content {
+      padding-top: 80px;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(0,0,0,0.4);
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* About section */
+    #about {
+      background: rgba(255,255,255,0.95);
+      color: #222;
+      padding: 60px 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    #about h2 {
+      margin-bottom: 15px;
+    }
+    #about p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+
+    /* Portfolio */
+    #portfolio {
+      background: rgba(34, 34, 34, 0.9);
+      padding: 60px 20px;
+      border-radius: 12px;
+      max-width: 1000px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    #portfolio h2 {
+      margin-bottom: 30px;
+    }
+    .portfolio-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .portfolio-item {
+      background: #fff;
+      color: #222;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    #contact {
+      background: rgba(255,255,255,0.95);
+      color: #222;
+      padding: 60px 20px;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    #contact a {
+      color: #3ec6e0;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+      }
+      .navbar ul {
+        margin-top: 9px;
+      }
+      .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT1KsoNY94nJ00zmp65PdPsq9lgxXPMGUqNsKW4jWdGXIt1VqY-_facZ3dkCHwDazefmI&usqp=CAU" alt="Logo">
+      <span class="title">Ashwin P Pillai</span>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Hello, I'm Ashwin</h1>
+      <p>Aspiring software engineer & creative thinker passionate about building impactful digital experiences.</p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a Computer Science student at Karunya University with a strong interest in full-stack development, UI/UX design, and emerging technologies. I believe in crafting solutions that are both functional and delightful to use.</p>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT93tYx88BGCLUR5ForP1ZYGBzT6N4uHeVotA&s" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>A short description of the project goes here.</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxElCiolNmW-uI7TTHAWygeLyxiuBNnIv2bI4dRGRs8tit64EqhQ_rPOZd1Pa-qpVm6i4&usqp=CAU" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>A short description of the project goes here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ashwinp@karunya.edu.in">ashwinp@karunya.edu.in</a></p>
+    </section>
+  </div>
+</body>
+</html>
