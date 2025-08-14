@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cake Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        text-align: center;
+    }
+    header {
+        background-color: #b71c1c;
+        color: white;
+        padding: 15px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .cakes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .cake {
+        margin: 10px;
+        text-align: center;
+    }
+    .cake img {
+        width: 200px;
+        height: 150px;
+        border-radius: 8px;
+    }
+    .order-section {
+        background: white;
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+    h2 {
+        color: #0d47a1;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #1976d2;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 15px;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #1565c0;
+    }
+    .result {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: green;
+        text-align: center;
+    }
+    .total {
+        background: green;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>CAKE SHOP</header>
+
+<div class="cakes">
+    <div class="cake">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSD5rrJ5_D08N_jjolduzmrxUViX9_2Z7-LeDH6W6Smbh-NBtjAJ90QpPf7AMcBeOwlm6tzc1PQnKLATaHl0L-Lzi4LkjG04_bQu0aA-IDuvQzh9XQtjwCrLg" alt="Rainbow Cake">
+        <p>Rainbow Cake – Rs. 300</p>
+    </div>
+    <div class="cake">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQTDchoO9HILEfMiGNI5d0CL0uge1ToYIO7R78BVFL8Wu7LDFY4QlegJ4Nt02enIbAO6YK_G_E2-K2rVXAXeTIBLdw7nh_38RVb-yj2pI5K" alt="Chocolate Cake">
+        <p>Chocolate Cake – Rs. 200</p>
+    </div>
+    <div class="cake">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGnWmG-_KAABu2lp3p-jY6Lt5tftk58GWR5jGVVgizFOUiLDd4SUAI94CcNPnzIU7w7FFZ6CSwJB2j7o059a8aAwsiCXkigtCr-qtX-g" alt="Red Velvet Cake">
+        <p>Red Velvet Cake – Rs. 250</p>
+    </div>
+    <div class="cake">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0_tbrJhFqRBvlE7U2ICxmKMfmAS80QxP_naYKScnbLyK_zrqKmX7dRX5KbrHRUV0zhJE7OcXxrbn-phcibPiCD5rG5_S2dBiJrBfKgB1SxheGEdBFd_VfFOqFR9BPQqnp_ZIeWgtpX8L6/s1600/DSC07710.JPG" alt="Black Forest Cake">
+        <p>Black Forest Cake – Rs. 350</p>
+    </div>
+</div>
+
+<h2>Order Cake</h2>
+<div class="order-section">
+    <label>Rainbow Cake (Quantity)</label>
+    <input type="number" id="rainbow" value="0">
+
+    <label>Chocolate Cake (Quantity)</label>
+    <input type="number" id="chocolate" value="0">
+
+    <label>Red Velvet Cake (Quantity)</label>
+    <input type="number" id="redvelvet" value="0">
+
+    <label>Black Forest Cake (Quantity)</label>
+    <input type="number" id="blackforest" value="0">
+
+    <button onclick="calculateBill()">Place Order</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculateBill() {
+    let rainbow = parseInt(document.getElementById("rainbow").value) || 0;
+    let chocolate = parseInt(document.getElementById("chocolate").value) || 0;
+    let redvelvet = parseInt(document.getElementById("redvelvet").value) || 0;
+    let blackforest = parseInt(document.getElementById("blackforest").value) || 0;
+
+    let total = (rainbow * 300) + (chocolate * 200) + (redvelvet * 250) + (blackforest * 350);
+
+    document.getElementById("result").innerHTML = `
+        <p>Purchase Order Bill!!!</p>
+        <div class='total'>Total Price: Rs. ${total}</div>
+    `;
+}
+</script>
+
+</body>
+</html>
